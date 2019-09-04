@@ -61,7 +61,7 @@ int ht16k33_init(ht16k33_t *dev, const ht16k33_params_t *params) {
 int ht16k33_display_decimal(ht16k33_t *dev, uint16_t number) {
     uint16_t numbuff = number;
     uint8_t posval;
-    uint8_t numlen, i;
+    int_fast8_t numlen, i;
     uint16_t buff[5] = {
         (0x3F),
         (0x3F),
