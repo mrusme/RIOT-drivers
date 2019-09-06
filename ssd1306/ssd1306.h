@@ -178,6 +178,8 @@ void ssd1306_write(ssd1306_t *dev, uint8_t c, uint8_t textsize, uint16_t textcol
 void ssd1306_draw_char(ssd1306_t *dev, int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size);
 size_t ssd1306_printf(ssd1306_t *dev, uint8_t textsize, uint16_t textcolor, uint16_t textbgcolor, const char *format, ...);
 
+void ssd1306_draw_bitmap(ssd1306_t *dev, int16_t x, int16_t y, uint8_t *bitmap, int16_t w, int16_t h, uint16_t color, uint16_t bg);
+
 #ifdef __cplusplus
 }
 #endif
