@@ -354,6 +354,8 @@ int ssd1306_display(ssd1306_t *dev) {
 
 int ssd1306_clear_display(ssd1306_t *dev) {
   memset(buffer, 0, (dev->params.screen_width*dev->params.screen_height/8));
+  dev->params.cursor_x = 0;
+  dev->params.cursor_y = 0;
   return SSD1306_OK;
 }
 
