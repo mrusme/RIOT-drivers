@@ -146,6 +146,7 @@ int ssd1306_display(ssd1306_t *dev);
 int ssd1306_clear_display(ssd1306_t *dev);
 int ssd1306_invert_display(ssd1306_t *dev, bool i);
 int ssd1306_dim(ssd1306_t *dev, bool dim);
+int ssd1306_on(ssd1306_t *dev, bool on);
 
 int ssd1306_draw_pixel(ssd1306_t *dev, int16_t x, int16_t y, uint16_t color);
 int ssd1306_draw_fast_h_line(ssd1306_t *dev, int16_t x, int16_t y, int16_t w, uint16_t color);

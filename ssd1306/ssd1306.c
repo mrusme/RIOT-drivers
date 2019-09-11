@@ -396,6 +396,14 @@ int ssd1306_dim(ssd1306_t *dev, bool dim) {
     return SSD1306_OK;
 }
 
+int ssd1306_on(ssd1306_t *dev, bool on) {
+    if(on == true) {
+        return ssd1306_command(dev, SSD1306_DISPLAYON);
+    } else {
+        return ssd1306_command(dev, SSD1306_DISPLAYOFF);
+    }
+}
+
 int ssd1306_draw_pixel(ssd1306_t *dev, int16_t x, int16_t y, uint16_t color) {
     if ((x < 0) || (x >= dev->params.screen_width) || (y < 0) || (y >= dev->params.screen_height))
     return -1; // TODO: Error code
